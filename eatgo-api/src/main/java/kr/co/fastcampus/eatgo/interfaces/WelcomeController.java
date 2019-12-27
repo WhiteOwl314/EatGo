@@ -8,6 +8,6 @@ public class WelcomeController {
 
     @GetMapping("/") //http 접속을 위한 네가지 메소드 중 하나 , /는 접속하고 바로
     public String hello() {
-        return "Hello, world!";
+        return "Hello, world!!!";
     }
 }
