@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component //Spring 이 관리할 수 있도록 -> 이 클래스를 사용하는 곳에서 @Autowired를 해주면
-public class RestaurantRepository {
+public class RestaurantRepositoryImpl {
 
     private List<Restaurant> restaurants = new ArrayList<>();
 
-    public RestaurantRepository(){
+    public RestaurantRepositoryImpl(){
         restaurants.add( new Restaurant(2020L, "Cyber Food", "Seoul"));
         restaurants.add(new Restaurant(1004L, "Bob zip", "Seoul"));
     }

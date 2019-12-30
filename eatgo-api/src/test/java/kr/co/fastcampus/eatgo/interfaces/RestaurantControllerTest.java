@@ -1,6 +1,6 @@
 package kr.co.fastcampus.eatgo.interfaces;
 
-import kr.co.fastcampus.eatgo.domain.RestaurantRepository;
+import kr.co.fastcampus.eatgo.domain.RestaurantRepositoryImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,6 @@ import org.springframework.test.web.servlet.MockMvc;
 
 
 import static org.hamcrest.core.StringContains.containsString;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -27,7 +26,7 @@ public class RestaurantControllerTest {
     @SpyBean //테스트를 실행할 때 이것을 사용하겠다! : 의존성 주입
     //의존성주입 장점: 우리가 사용하려는 객체를 자유롭게 변경 가능
     //repository 를 인터페이스로 변경하고 만들었던부분을 실제 구현으로 만들기
-    private RestaurantRepository restaurantRepository;
+    private RestaurantRepositoryImpl restaurantRepository;
 
     //컨트롤러를 어떻게 테스트 할 지 알아보기
     @Test
