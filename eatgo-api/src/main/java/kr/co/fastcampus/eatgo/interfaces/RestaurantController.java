@@ -1,6 +1,7 @@
 package kr.co.fastcampus.eatgo.interfaces;
 
 import kr.co.fastcampus.eatgo.domain.Restaurant;
+import kr.co.fastcampus.eatgo.domain.RestaurantRepository;
 import kr.co.fastcampus.eatgo.domain.RestaurantRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,7 @@ public class RestaurantController {
 
     //Repository를 여기서 할당해주고 있는데 이번에 다른 곳으로 옮길 것
     @Autowired //Controller를 만들어줄 때 스프링이 알아서 생성해서 넣어줌
-   private RestaurantRepositoryImpl repository;
+   private RestaurantRepository repository;
 
     // List 생성 -> 리스트 반환
     @GetMapping("/restaurants")
