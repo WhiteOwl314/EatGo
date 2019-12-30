@@ -28,9 +28,7 @@ public class RestaurantController {
     @GetMapping("/restaurants/{id}")
     public Restaurant detail(@PathVariable("id") Long id/*URL에 있는 id 번수 */){
 
-        List<Restaurant> restaurants = repository.findAll(); //repository의 전부를 얻는다.
-
-        Restaurant restaurant = restaurants.stream().filter(r -> r.getId().equals(id)).findFirst().orElse(null);
+        Restaurant restaurant = repository.findnyId(id); //repository의 전부를 얻는다.
 
         return restaurant;
     }
