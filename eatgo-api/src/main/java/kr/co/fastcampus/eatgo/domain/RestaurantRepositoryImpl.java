@@ -14,6 +14,7 @@ public class RestaurantRepositoryImpl implements RestaurantRepository {
         restaurants.add( new Restaurant(2020L, "Cyber Food", "Seoul"));
         restaurants.add(new Restaurant(1004L, "Bob zip", "Seoul"));
     }
+
     @Override
     public List<Restaurant> findAll() {
         return restaurants;
